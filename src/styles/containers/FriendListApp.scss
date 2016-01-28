@@ -1,0 +1,13 @@
+.module>div.starred {
+    background-color: rgba(58, 219, 118, 0.7);
+    color: white;
+
+    .moduleInput {
+        opacity: 0.6;
+        border-color: white;
+        color: white;
+    }
+    .moduleInput:focus {
+        opacity: 1;
+    }
+}

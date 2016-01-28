@@ -1,0 +1,29 @@
+.top-bar {
+    background: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 2rem;
+    .button {
+        margin: 0;
+    }
+    ul {
+        background: none;
+    }
+    a {
+        color: white;
+    }
+}
+
+.page-container {
+    background-image: linear-gradient(to bottom right,rgba(121, 189, 243, 0.6),rgba(0, 0, 0, 0) 100%);
+    background-color: rgb(166, 132, 132);
+    height: 100%;
+    overflow: auto;
+}
+
+.view-container {
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom:5rem;
+    max-width: 1100px;
+    overflow: auto;
+}

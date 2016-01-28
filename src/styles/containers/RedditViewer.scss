@@ -1,0 +1,112 @@
+.redditViewer {
+    .topRight {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .lastUpdated {
+        color: grey;
+        font-size:0.8rem;
+    }
+
+    .preSubreddit {
+        color: grey;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+
+        list-style: none;
+        overflow:auto;
+        padding: 0.5rem 0.2rem;
+        border-bottom: 1px rgba(0,0,0,0.02) dotted;
+
+        .leftWrap {
+            float:left;
+            width:85%;
+            &:hover {
+                background-color: rgba(230,230,230,0.4);
+            .title {
+                text-decoration: underline;
+            }
+            }
+
+            .imgWrap {
+                float:left;
+                width:15%;
+                padding: 3px;
+
+                img {
+                    margin-top: 2px;
+                    border-radius: 2px;
+                    border: 1px solid #888;
+                    width: 100%;
+                }
+            }
+
+            .imgWrap ~ .mainWrap {
+                width:80%;
+                padding-left: 0.5rem;
+            }
+            .mainWrap {
+                float:left;
+                width:100%;
+                font-size: 0.86rem;
+                line-height: 1.2rem;
+                .title {
+                    display: block;
+                }
+            }
+
+            .metaSub {
+                font-size: 0.7rem;
+                color: #999;
+
+                span {
+                    margin-right: 0.2rem;
+                }
+
+                span:first-child {
+                    color: #860003;
+                }
+            }
+        }
+        .rightWrap {
+            &:hover {
+                background-color: rgba(230,230,230,0.4);
+                .comments {
+                    text-decoration: underline;
+                }
+            }
+            float:right;
+            width:15%;
+
+            .metaMain {
+                color: #999;
+                font-size:0.5rem;
+                text-align:center;
+                border-left: 1px rgba(0,0,0,0.08) dotted;
+
+                .comments {
+                    border: 1px solid rgba(0,0,0,0.1);
+                    border-radius: 3px;
+                    color: #860003;
+                    width: 70%;
+                    display:block;
+                    line-height: 0.8rem;
+                    margin: 0.1rem auto 0;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,36 @@
+.friendList {
+    margin: 0;
+    height:22rem;
+    overflow: auto;
+    background-color: rgba(255,255,255,0);
+
+    li {
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+        margin: 0.2em 0;
+        text-align:left;
+
+        .friendInfo {
+            flex: 1 0 auto;
+        }
+
+        .friendActions {
+            flex: 0 0 auto;
+        }
+
+        .btnAction {
+            margin: 0;
+            border-radius:5px;
+            border: 1px solid rgba(200,200,200,0.5);
+            padding: 0.5em;
+            margin-right: 0.5em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.moduleWrap {
+    width:33%;
+    float:left;
+}
+
+.module {
+    padding: 1rem;
+}
+
+.module>div {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: white;
+    padding:1rem 1rem 0.4rem 1rem;
+    text-align: left;
+    position: relative;
+}
