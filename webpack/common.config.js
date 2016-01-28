@@ -1,6 +1,4 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
-const postcssImport = require('postcss-import');
 const merge = require('webpack-merge');
 
 const development = require('./dev.config.js');
@@ -33,10 +31,8 @@ const common = {
   },
 
   module: {
-    loaders: [{
-      test: /bootstrap-sass\/assets\/javascripts\//,
-      loader: 'imports?jQuery=jquery',
-    }, {
+    loaders: [
+    {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff',
     }, {
@@ -55,9 +51,12 @@ const common = {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=image/svg+xml',
     }, {
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       loaders: ['babel-loader'],
       exclude: /node_modules/,
+    }, {
+      test: /\.css$/,
+      loader: 'style!css?localIdentName=[path][name]--[local]'
     }, {
       test: /\.png$/,
       loader: 'file?name=[name].[ext]',
@@ -65,18 +64,7 @@ const common = {
       test: /\.jpg$/,
       loader: 'file?name=[name].[ext]',
     }],
-  },
-
-  postcss: (webpack) => {
-    return [
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-      postcssImport({
-        addDependencyTo: webpack,
-      }),
-    ];
-  },
+  }
 };
 
 if (TARGET === 'start' || !TARGET) {
